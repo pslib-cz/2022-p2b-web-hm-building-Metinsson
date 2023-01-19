@@ -16,7 +16,7 @@
         </a>
         <ul class="nav-menu show">
             <li class="nav-item">
-                <a href="#" class="nav-link">DOMŮ</a>
+                <a href="#" class="nav-link act">DOMŮ</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">SLUŽBY</a>
@@ -38,29 +38,40 @@
             <span class="bar"></span>
         </div>
     </nav>
-    <div class="div_page_header"></div>
+    <div class="div_page_header">
+        <div class="comp_name">
+            <h1 class="comp_name_main c_white">HM building.cz s.r.o.</h1>
+            <p class="comp_name_desc c_white">liberecká stavební společnost</p>
+        </div>
+    </div>
   </header>
 
     <script>
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-menu");
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        const compName = document.querySelector(".comp_name");
+        const headerBg = document.querySelector(".div_page_header");
 
-      hamburger.addEventListener("click", mobileMenu);
+        hamburger.addEventListener("click", mobileMenu);
 
-      function mobileMenu() {
-      navMenu.classList.toggle("show");
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-      }
-      const navLink = document.querySelectorAll(".nav-link");
+        function mobileMenu() {
+            compName.classList.toggle("show");
+            navMenu.classList.toggle("show");
+            headerBg.classList.toggle("show");
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+        const navLink = document.querySelectorAll(".nav-link");
 
-      navLink.forEach(n => n.addEventListener("click", closeMenu));
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
 
-      function closeMenu() {
-      navMenu.classList.toggle("show");
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
-      }
+        function closeMenu() {
+            headerBg.classList.toggle("show");
+            compName.classList.toggle("show");
+            navMenu.classList.toggle("show");
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
     </script>
 </body>
 </html>
