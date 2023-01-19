@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+    <link href="styles/normalize.css" rel="stylesheet" type="text/css">
+    <title>Domů | HM building</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+        <a href="#" class="nav-logo">
+          <img src="media/logo.png">
+        </a>
+        <ul class="nav-menu show">
+            <li class="nav-item">
+                <a href="#" class="nav-link">DOMŮ</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">SLUŽBY</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">REFERENCE</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">O NÁS</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">KONTAKTY</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+            <p class="hamberger_menu">MENU</p>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <div class="div_page_header"></div>
+  </header>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+      navMenu.classList.toggle("show");
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+      }
+      const navLink = document.querySelectorAll(".nav-link");
+
+      navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+      function closeMenu() {
+      navMenu.classList.toggle("show");
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+      }
+    </script>
+</body>
+</html>
