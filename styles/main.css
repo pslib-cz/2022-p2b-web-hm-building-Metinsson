@@ -1,3 +1,31 @@
+.--white {
+    color: white;
+}
+
+.--black {
+    color: black;
+}
+
+.--orange {
+    color: #eb6c27;
+}
+
+.--bolder {
+    font-weight: bolder;
+}
+
+.--sluzby {
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
 li {
     list-style: none;
 }
@@ -58,8 +86,18 @@ a {
     background-size: cover; 
 }
 
-.c_white {
-    color: white;
+.duvera {
+    height: 45vh;
+    width: 100%;
+    background-image: radial-gradient(transparent, rgb(0, 0, 0, 0.9)), url(../media/background-CTAblock-4460w.jpg);
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0%;
+    background-position: center center;
+    background-size: cover; 
+}
+
+.mar {
     margin: 0.3rem;
 }
 
@@ -76,8 +114,107 @@ a {
     font-size: 20px;
 }
 
-.act {
+.header_text {
+    margin-top: 15%;
+}
+
+.header_sluzby_h {
+    text-align: center;
+    font-size: 22px;
+}
+
+.header_sluzby_p {
+    text-align: center;
+    font-size: 14px;
+    border-left: 50px solid white;
+    border-right: 50px solid white;
+}
+
+.container {
+    margin: 3em;
+}
+
+.novostavby_img {
+    background-image: url(../media/sluzba-novostavby-1200w.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 15%;
+    width: 100%;
+    height: 307px;
+    display: block;
+    max-width: 729px;
+    max-height: 307px;
+}
+
+.prum-stavby_img {
+    background-image: url(../media/sluzba-prumyslove-stavby-1920w.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 15%;
+    width: 100%;
+    height: 307px;
+    display: block;
+    max-width: 729px;
+    max-height: 307px;
+}
+
+.rekonstrukce_img {
+    background-image: url(../media/sluzba-rekonstrukce-1920w.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 15%;
+    width: 100%;
+    height: 307px;
+    display: block;
+    max-width: 729px;
+    max-height: 307px;
+}
+
+.komunikace_img {
+    background-image: url(../media/sluzba-komunikace-a-zpevnene-plochy-1200w.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 15%;
+    width: 100%;
+    height: 307px;
+    display: block;
+    max-width: 729px;
+    max-height: 307px;
+}
+
+.btn_gap {
+    margin-bottom: 50px;
+}
+
+.more_btn {
+    padding: 1em 2.5em 1em 2.5em;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    width: 11em;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23EB6C27FF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='23' stroke-linecap='square'/%3e%3c/svg%3e");
+    margin-bottom: 50px;
     font-weight: bolder;
+}
+
+.duvera_btn {
+    padding: 1em 2.5em 1em 2.5em;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    width: 11em;
+    background-color: #eb6c27;
+    margin-bottom: 50px;
+}
+
+.duvera_text_h {
+    font-size: 17px;
+}
+
+.duvera_text {
+    padding-left: 3em;
+    padding-right: 5em;
+    padding-top: 1.5em;
 }
 
 @media only screen and (max-width: 920px) {
@@ -125,6 +262,34 @@ a {
 @media only screen and (max-width: 600px) {
     .div_page_header {
         height: 50vh;
+    }
+
+    .duvera {
+        height: 32vh;
+    }
+
+    .novostavby_img {
+        height: 134px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .prum-stavby_img {
+        height: 134px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rekonstrukce_img {
+        height: 134px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .komunikace_img {
+        height: 134px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
