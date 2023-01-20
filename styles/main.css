@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
+
+html { font-family: 'Open Sans', sans-serif; }
+
 .--white {
     color: white;
 }
@@ -14,12 +18,31 @@
     font-weight: bolder;
 }
 
-.--sluzby {
+.--small {
+    font-size: 12px;
+}
+
+.--big {
     font-size: 14px;
+}
+
+.--bigger {
+    font-size: 15px;
+}
+
+
+.--btn_gap_bot {
+    margin-bottom: 50px;
+}
+
+.--btn_gap_top {
+    margin-top: 50px;
 }
 
 h1 {
     font-size: 22px;
+    color: #3A3A3A;
+    font-weight: 800;
 }
 
 h2 {
@@ -32,6 +55,10 @@ li {
 
 a {
     text-decoration: none;
+}
+
+.footer {
+    background-color: #eb6c27;
 }
 
 .navbar {
@@ -158,6 +185,39 @@ a {
     max-height: 307px;
 }
 
+.galerie_reference_zbrojnice_img {
+    background-image: url(../media/reference/reference-hasicska-zbrojnice-600w.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    display: block;
+    max-width: 729px;
+    max-height: 307px;
+}
+
+.galerie_reference_pradelna_img {
+    background-image: url(../media/reference/reference-pradelna-600w.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    display: block;
+    max-width: 729px;
+    max-height: 307px;
+}
+
+.galerie_reference_plocha_img {
+    background-image: url(../media/reference/reference-plocha-600w.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 307px;
+    display: block;
+    max-width: 729px;
+    max-height: 200px;
+}
+
 .rekonstrukce_img {
     background-image: url(../media/sluzba-rekonstrukce-1920w.jpg);
     background-repeat: no-repeat;
@@ -182,16 +242,12 @@ a {
     max-height: 307px;
 }
 
-.btn_gap {
-    margin-bottom: 50px;
-}
-
 .more_btn {
     padding: 1em 2.5em 1em 2.5em;
     display: block;
     box-sizing: border-box;
     text-align: center;
-    width: 11em;
+    width: 12em;
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23EB6C27FF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='23' stroke-linecap='square'/%3e%3c/svg%3e");
     margin-bottom: 50px;
     font-weight: bolder;
@@ -202,9 +258,20 @@ a {
     display: block;
     box-sizing: border-box;
     text-align: center;
-    width: 11em;
+    width: 12em;
     background-color: #eb6c27;
     margin-bottom: 50px;
+}
+
+.reference__btn {
+    padding: 1em 2.5em 1em 2.5em;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    width: 12em;
+    background-color: #eb6c27;
+    margin-bottom: 50px;
+    margin: auto;
 }
 
 .duvera_text_h {
@@ -215,6 +282,14 @@ a {
     padding-left: 3em;
     padding-right: 5em;
     padding-top: 1.5em;
+}
+
+.galerie_reference_item {
+    margin-top: 80px;
+}
+
+.galerie_reference_text {
+    align-content: center;
 }
 
 @media only screen and (max-width: 920px) {
@@ -265,7 +340,7 @@ a {
     }
 
     .duvera {
-        height: 32vh;
+        height: 33vh;
     }
 
     .novostavby_img {
