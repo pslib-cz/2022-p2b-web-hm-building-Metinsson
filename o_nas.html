@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+    <link href="styles/normalize.css" rel="stylesheet" type="text/css">
+    <title>O nás | HM building</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+        <img src="media/logo.png" alt="HM building">
+        </a>
+        <menu class="nav-menu show">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">DOMŮ</a>
+            </li>
+            <li class="nav-item">
+                <a href="#sluzby" class="nav-link">SLUŽBY</a>
+            </li>
+            <li class="nav-item">
+                <a href="reference.html" class="nav-link">REFERENCE</a>
+            </li>
+            <li class="nav-item">
+                <a href="o_nas.html" class="nav-link --bolder">O NÁS</a>
+            </li>
+            <li class="nav-item">
+                <a href="kontakt.html" class="nav-link">KONTAKTY</a>
+            </li>
+        </menu>
+        <div class="hamburger">
+            <p class="hamberger_menu">MENU</p>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <div class="div_page_header --none"></div>
+    <div class="container">
+        <h1>O nás</h1>
+        <div class="o-nas_text">
+            <p>Společnost <span class="--bold">HM Building.cz s.r.o.</span> nabízí své <span class="--bold">služby ve stavebnictví od roku 2015</span>, a to převážně po <span class="--bold">Libereckém kraji</span>.<br><br>V oboru pozemního stavitelství <span class="--bold">provádíme stavbu a rekonstrukci</span>:</p>
+            <div class="dots">
+                <p class="dot">průmyslových staveb</p>
+                <p class="dot">obytných staveb</p>
+                <p class="dot">staveb občanské vybavenosti</p>
+                <p class="dot">komunikací vozidlových, ale i pěších</p>
+            </div>
+            <p>Zakázky můžeme řešit tzv. <span class="--bold">na klíč</span>, kde jsme schopni zajistit dodávky a montáž elektro-instalace NN a VN, zdravotně – technické instalace, ústředního vytápění, vzduchotechniky, MaR, případně jsme schopni, po dohodě s investorem, dodat pouze některou ucelenou část celkové zakázky.<br><br>Naše firma taktéž zajišťuje <span class="--bold">projekční služby a služby týkající se statického posouzení staveb</span> v oboru pozemního stavitelství a dále jsme schopni zajistit <span class="--bold">investorsko–inženýrské služby</span>.<br><br><span class="--bold">Záruční doba</span> na námi provedená díla se pohybuje od 24 do 60 měsíců.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer_text --center container">
+                <p class="footer_main --white">Plácneme si pro Váš projekt?</p>
+                <p class="--bigger --white">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+            </div>
+            <div class="--btn_gap_top">
+                <a href="#" class="footer_btn --orange --bolder">Nezávazně poptat</a>
+            </div>    
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        const headerBg = document.querySelector(".div_page_header");
+        const footer = document.querySelector(".footer");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            footer.classList.toggle("show");
+            navMenu.classList.toggle("show");
+            headerBg.classList.toggle("show");
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            footer.classList.toggle("show");
+            headerBg.classList.toggle("show");
+            navMenu.classList.toggle("show");
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+</body>
+</html>

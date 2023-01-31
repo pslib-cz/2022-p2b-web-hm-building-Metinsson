@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+    <link href="styles/normalize.css" rel="stylesheet" type="text/css">
+    <title>Reference | HM building</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+        <img src="media/logo.png" alt="HM building">
+        </a>
+        <menu class="nav-menu show">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">DOMŮ</a>
+            </li>
+            <li class="nav-item">
+                <a href="#sluzby" class="nav-link">SLUŽBY</a>
+            </li>
+            <li class="nav-item">
+                <a href="reference.html" class="nav-link">REFERENCE</a>
+            </li>
+            <li class="nav-item">
+                <a href="o_nas.html" class="nav-link --bolder">O NÁS</a>
+            </li>
+            <li class="nav-item">
+                <a href="kontakt.html" class="nav-link">KONTAKTY</a>
+            </li>
+        </menu>
+        <div class="hamburger">
+            <p class="hamberger_menu">MENU</p>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <div class="div_page_header --none"></div>
+    <div class="container">
+        <h1>Reference</h1>
+        <div class="o-nas_text">
+            <p>Stojí za námi <span class="--bold">kvalitně vyhotovené zakázky </span>dle konkrétních požadavků zadavatelů <span class="--bold">podepřené letitými zkušenostmi ve stavebnictví. </span>To, že <span class="--bold">obrátit se na právě nás je vhodná volba potvrdí naši klienti</span>, na jejichž stavbách jsme zanechali náš rukopis. Reference jsou jen zlomkem naší práce, za kterou se rozhodně nestydíme.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer_text --center container">
+                <p class="footer_main --white">Plácneme si pro Váš projekt?</p>
+                <p class="--bigger --white">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+            </div>
+            <div class="--btn_gap_top">
+                <a href="#" class="footer_btn --orange --bolder">Nezávazně poptat</a>
+            </div>    
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        const footer = document.querySelector(".footer");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            footer.classList.toggle("show");
+            navMenu.classList.toggle("show");
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            footer.classList.toggle("show");
+            navMenu.classList.toggle("show");
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+</body>
+</html>

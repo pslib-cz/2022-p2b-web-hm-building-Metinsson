@@ -11,15 +11,15 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <a href="#" class="nav-logo">
-            <img src="media/logo.png">
+            <a href="index.html" class="nav-logo">
+            <img src="media/logo.png" alt="HM building">
             </a>
-            <ul class="nav-menu show">
+            <menu class="nav-menu show">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link --bolder">DOMŮ</a>
                 </li>
                 <li class="nav-item">
-                    <a href="sluzby.html" class="nav-link">SLUŽBY</a>
+                    <a href="#sluzby" class="nav-link">SLUŽBY</a>
                 </li>
                 <li class="nav-item">
                     <a href="reference.html" class="nav-link">REFERENCE</a>
@@ -30,7 +30,7 @@
                 <li class="nav-item">
                     <a href="kontakt.html" class="nav-link">KONTAKTY</a>
                 </li>
-            </ul>
+            </menu>
             <div class="hamburger">
                 <p class="hamberger_menu">MENU</p>
                 <span class="bar"></span>
@@ -44,7 +44,7 @@
                 <p class="comp_name_desc --white mar">liberecká stavební společnost</p>
             </div>
         </div>
-        <div class="header_text">
+        <div class="header_text" id="sluzby">
             <h1 class="header_sluzby_h --black">Využijte škálu našich <a href="sluzby.html" class="--orange">služeb</a></h1>
             <p class="header_sluzby_p --black">Ačkoliv provádíme především <b>průmyslové stavby</b>, není pro nás problém postavit Vám <b>rodinný domek na klíč</b>, nebo jen hrubou stavbu. Nejsou nám cizí ani <b>rekonstrukce budov</b> a jejich údržba a to včetně okolních ploch.</p>
         </div>
@@ -116,16 +116,18 @@
             </div>
         </div>
         <div class="--btn_gap_top">
-            <a href="#" class="reference__btn --white --bolder">Více referencí</a>
+            <a href="#" class="reference_btn --white --bolder">Více referencí</a>
         </div>
     </div>
     <footer class="footer">
         <div class="wrapper">
-            <div class="footer_text">
-                <h1 class="--white">Plácneme si pro Váš projekt?</h1>
+            <div class="footer_text --center container">
+                <p class="footer_main --white">Plácneme si pro Váš projekt?</p>
                 <p class="--bigger --white">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
             </div>
-            <a href="#" class="reference__btn --orange --bolder">Více referencí</a>
+            <div class="--btn_gap_top">
+                <a href="#" class="footer_btn --orange --bolder">Nezávazně poptat</a>
+            </div>    
         </div>
     </footer>
     <script>
@@ -133,10 +135,20 @@
         const navMenu = document.querySelector(".nav-menu");
         const compName = document.querySelector(".comp_name");
         const headerBg = document.querySelector(".div_page_header");
+        const container = document.querySelector(".container");
+        const reference = document.querySelector(".reference");
+        const duvera = document.querySelector(".duvera");
+        const headerText = document.querySelector(".header_text");
+        const footer = document.querySelector(".footer");
 
         hamburger.addEventListener("click", mobileMenu);
 
         function mobileMenu() {
+            footer.classList.toggle("show");
+            duvera.classList.toggle("show");
+            headerText.classList.toggle("show");
+            reference.classList.toggle("show");
+            container.classList.toggle("show");
             compName.classList.toggle("show");
             navMenu.classList.toggle("show");
             headerBg.classList.toggle("show");
@@ -148,6 +160,11 @@
         navLink.forEach(n => n.addEventListener("click", closeMenu));
 
         function closeMenu() {
+            footer.classList.toggle("show");
+            duvera.classList.toggle("show");
+            headerText.classList.toggle("show");
+            reference.classList.toggle("show");
+            container.classList.toggle("show");
             headerBg.classList.toggle("show");
             compName.classList.toggle("show");
             navMenu.classList.toggle("show");

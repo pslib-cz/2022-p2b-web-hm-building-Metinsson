@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+    <link href="styles/normalize.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <title>Kontakt | HM building</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+        <img src="media/logo.png" alt="HM building">
+        </a>
+        <menu class="nav-menu show">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">DOMŮ</a>
+            </li>
+            <li class="nav-item">
+                <a href="#sluzby" class="nav-link">SLUŽBY</a>
+            </li>
+            <li class="nav-item">
+                <a href="reference.html" class="nav-link">REFERENCE</a>
+            </li>
+            <li class="nav-item">
+                <a href="o_nas.html" class="nav-link">O NÁS</a>
+            </li>
+            <li class="nav-item">
+                <a href="kontakt.html" class="nav-link --bolder">KONTAKTY</a>
+            </li>
+        </menu>
+        <div class="hamburger">
+            <p class="hamberger_menu">MENU</p>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Kontaktujte nás</h1>
+        <p class="--bigger">Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.</p>
+        <div class="dots">
+            <p class="phone_dot --orange --bolder">+420 775 550 564</p>
+            <p class="mail_dot --orange --bolder">stavby@hm-building.cz</p>
+            <a href="https://www.google.com/maps/place/K%C5%99i%C5%BEansk%C3%A1+12,+Horn%C3%AD+Such%C3%A1,+460+10+Liberec/@50.7600366,15.0014291,17z/data=!4m6!3m5!1s0x470936fe7ea6ccbb:0x362ba2cad58e444!8m2!3d50.7606998!4d15.0022441!16s%2Fg%2F11crt84wkg?hl=cs-CZ"><p class="location_dot --orange --bolder">Křižanská 12, Liberec XXII-Horní Suchá</p></a>
+        </div>
+    </div>
+    <a href="https://www.google.com/maps/place/K%C5%99i%C5%BEansk%C3%A1+12,+Horn%C3%AD+Such%C3%A1,+460+10+Liberec/@50.7600366,15.0014291,17z/data=!4m6!3m5!1s0x470936fe7ea6ccbb:0x362ba2cad58e444!8m2!3d50.7606998!4d15.0022441!16s%2Fg%2F11crt84wkg?hl=cs-CZ"><div class="map"></div></a>
+    <div class="container">
+        <p class="--title --bolder">Nezávazná poptávka služeb</p>
+        <p>Plácneme si pro Váš projekt? Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+        <form action="/action_page.php">
+        <div class="form">
+            <div class="form_item --bold">
+                <label for="name">Jméno a příjmení</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form_item --bold">
+                <label for="mail">E-mail</label>
+                <input type="text" id="mail" name="mail">
+            </div>
+            <div class="form_item --bold">
+                <label for="phone">Telefon</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+            <div class="form_item --bold">
+                <label for="services" style="width: 100%;">Poptávaná služba</label>
+                <form>
+                    <select id="services" name="services">
+                        <option>Novostavba</option>
+                        <option>Průmyslové stavba</option>
+                        <option>Rekonstrukce domu</option>
+                        <option>Komunikace a zpevněné plochy</option>
+                    </select>
+                  </form>
+            </div>
+            <div class="form_item --bold">
+                <label for="fname">Poznámka</label>
+                <textarea></textarea>
+            </div>
+            <a href="#" class="contact_btn --white --bolder">Odeslat nezávaznou poptávku</a>
+        </div>
+        </form>
+    </div>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            navMenu.classList.toggle("show");
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            navMenu.classList.toggle("show");
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+</body>
+</html>
