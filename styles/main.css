@@ -219,7 +219,7 @@ select {
 
 .nav-logo img {
     width: 200px;
-    height: 90px;
+    height: 100%;
     object-fit: contain;
 }
 
