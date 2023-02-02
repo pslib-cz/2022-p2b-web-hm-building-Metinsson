@@ -48,7 +48,7 @@
         </div>
     </div>
     <a href="https://www.google.com/maps/place/K%C5%99i%C5%BEansk%C3%A1+12,+Horn%C3%AD+Such%C3%A1,+460+10+Liberec/@50.7600366,15.0014291,17z/data=!4m6!3m5!1s0x470936fe7ea6ccbb:0x362ba2cad58e444!8m2!3d50.7606998!4d15.0022441!16s%2Fg%2F11crt84wkg?hl=cs-CZ"><div class="map"></div></a>
-    <div class="container">
+    <div class="container" id="hide">
         <p class="--title --bolder">Nezávazná poptávka služeb</p>
         <p>Plácneme si pro Váš projekt? Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
         <form action="/action_page.php">
@@ -85,12 +85,18 @@
         </form>
     </div>
     <script>
+        const hide = document.querySelector("#hide");
+        const container = document.querySelector(".container");
+        const map = document.querySelector(".map");
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
 
         hamburger.addEventListener("click", mobileMenu);
 
         function mobileMenu() {
+            hide.classList.toggle("show");
+            map.classList.toggle("show");
+            container.classList.toggle("show");
             navMenu.classList.toggle("show");
             hamburger.classList.toggle("active");
             navMenu.classList.toggle("active");
@@ -100,6 +106,9 @@
         navLink.forEach(n => n.addEventListener("click", closeMenu));
 
         function closeMenu() {
+            hide.classList.toggle("show");
+            map.classList.toggle("show");
+            container.classList.toggle("show");
             navMenu.classList.toggle("show");
             hamburger.classList.remove("active");
             navMenu.classList.remove("active");
