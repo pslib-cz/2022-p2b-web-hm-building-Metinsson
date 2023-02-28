@@ -121,6 +121,11 @@ select {
     padding: 1rem 1.5rem;
 }
 
+.hamburger_menu {
+    color: black;
+    text-transform: uppercase;
+} 
+
 .hamburger {
     display: none;
 }
@@ -215,6 +220,7 @@ select {
 
 .nav-link {
     color: black;
+    text-transform: uppercase;
 }
 
 .nav-logo img {
